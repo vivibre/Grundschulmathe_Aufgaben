@@ -73,3 +73,70 @@ if(punkteAddition < 4){
     alert("Sie haben es nicht in das Subtraktion-Level geschafft!");
     console.log("Sie haben es nicht in das Subtraktions-Level geschafft!");
 }
+
+//Multiplikationa-Level errericht
+var k = 0;
+var punkteMultiplikation = 0;
+
+if(punkteSubtraktion >= 4){
+
+    while(k != 5){
+    var e = Math.floor(Math.random() * 21);
+    var f = Math.floor(Math.random() * 21);
+        
+        let ergebnisMultiplikation = prompt("Wie viel ist " + e + " x " + f + "?");
+        console.log(ergebnisMultiplikation)
+        document.write(e + " x " + f + " = " + ergebnisMultiplikation + "<br>");
+
+        if(e * f == ergebnisMultiplikation){
+            punkteMultiplikation = punkteMultiplikation + 1;
+            alert("Richitg gerechnet! Neuer Punktestand: " + punkteMultiplikation + "/5");
+        }
+        else {
+             alert("Falsch gerechnet! Ihr Punktestand: " + punkteMultiplikation + "/5");
+        }
+        k++;
+    }
+}
+
+//Multiplikations-Level nicht errreicht
+if(punkteSubtraktion < 4){
+    alert("Sie haben es nicht in das Multiplikations-Level geschafft!");
+    console.log("Sie haben es nicht in das Multiplikations-Level geschafft!");
+}
+
+//Divisions-Level erreicht
+var l = 0;
+var punkteDivision = 0;
+
+if(punkteMultiplikation >= 4) {
+
+    alert("Divisions-Level: Ergbnis sind nur ganze Zahlen")
+
+    while(l != 5){
+        var g =Math.floor(Math.random() * (20-1) + 1);
+        var h =Math.floor(Math.random() * (20-1) + 1);
+
+        let ergebnisDivision = prompt("Wie viel ist " + h * g + " : " + g + "?");
+        console.log(ergebnisDivision)
+        document.write( h * g + " : " + g + " = " + ergebnisDivision + "<br>");
+
+            if((g * h) / g  == ergebnisDivision){
+                punkteDivision = punkteDivision + 1;
+                alert("Richitg gerechnet! Neuer Punktestand: " + punkteDivision + "/5");
+            }
+            else {
+            alert("Falsch gerechnet! Ihr Punktestand: " + punkteDivision + "/5");
+            }
+        
+    
+    l++;
+
+    }
+}
+
+//Divisions-Level nicht errreicht
+if (punkteMultiplikation < 4){
+    alert("Sie haben es nicht in das Divisions-Level geschafft!");
+    console.log("Sie haben es nicht in das Divisions-Level geschafft!");
+}
