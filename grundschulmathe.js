@@ -22,4 +22,6 @@ var punkteAddition = 0;
             else {
                 alert("Falsch gerechnet! Ihr Punktestand: " + punkteAddition + "/5");
             }
+            
+        i++;
 }
